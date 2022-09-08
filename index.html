@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iwatch - Home</title>
+
+    <!-- favicon -->
+    <!-- <link rel="icon" href="favicon.ico?v=2" /> -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- awesome icon -->
+    <script
+      src="https://kit.fontawesome.com/93199cc386.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Ionic icon cdn -->
+    <!-- <link
+      rel="stylesheet"
+      href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    /> -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="style/style.css" />
+
+    <!-- googl font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="nav">
+          <a href="index.html" class="nav-logo">i watch</a>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Review</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
+          </ul>
+          <div class="shoping-bag">
+            <!-- <i class="ion-bag"><span class="item-count">0</span></i> -->
+            <i class="fa-solid fa-cart-shopping"
+              ><span class="item-count">0</span></i
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="circle small-circle">
+        <img src="images/small_circle.png" alt="small-circle" />
+      </div>
+      <div class="circle large-circle">
+        <img src="images/large_circle.png" alt="large-circle" />
+      </div>
+
+      <div class="container">
+        <div class="content">
+          <div class="text">
+            <h1>Lifestyle <br />Smart<span> Watch</span></h1>
+            <h4>Technology of the feture</h4>
+            <p>
+              Introducing an all-new iwatch.<br>
+              Now with more capability at a better value than ever. <br>
+              Stylish new case colours. Powerful sensors for insights about your health and fitness. <br> 
+              Innovations for safety.And a new dual‑core processor for faster performance.
+            </p>
+            <a href="#" class="btn">Buy Now</a>
+          </div>
+          <div class="watch-wrapper">
+            <img src="images/watch.png" alt="watch" />
+          </div>
+        </div>
+      </div>
+
+      <div class="overlay">
+        <div class="layer layer-1"></div>
+        <div class="layer layer-2"></div>
+        <div class="layer layer-3"></div>
+      </div>
+    </section>
+
+    <!-- GSAP cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+      integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      gsap.to(".layer-1", { y: "-150vh", delay: 0.5 });
+      gsap.to(".layer-2", { y: "-150vh", delay: 0.7 });
+      gsap.to(".layer-3", { y: "-150vh", delay: 0.9 });
+      gsap.to(".overlay", { y: "-150vh", delay: 1 });
+
+      gsap.fromTo(
+        ".text",
+        { x: "30rem", opacity: 0 },
+        { x: 0, opacity: 1, ease: "back.out(1.7)", delay: 1.9 }
+      );
+
+      gsap.fromTo(
+        ".watch-wrapper",
+        { x: "30rem", opacity: 0 },
+        { x: 0, opacity: 1, ease: "back.out(1.7)", delay: 2.3 }
+      );
+
+      gsap.fromTo(
+        ".small-circle",
+        { x: "-30rem", opacity: 0 },
+        { x: 0, opacity: 1, ease: "back.out(1.7)", delay: 1 }
+      );
+
+      gsap.fromTo(
+        ".large-circle",
+        { x: "30rem", opacity: 0 },
+        { x: 0, opacity: 1, ease: "back.out(1.7)", delay: 1.5 }
+      );
+    </script>
+  </body>
+</html>
